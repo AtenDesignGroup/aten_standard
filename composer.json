@@ -1,0 +1,13 @@
+{
+    "name": "aten/aten-standard",
+    "description": "The Aten standard installation profile with modules that are pre-configured.",
+    "type": "drupal-profile",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Travis Tomka",
+            "email": "travis@aten.io"
+        }
+    ],
+    "require": {}
+}
