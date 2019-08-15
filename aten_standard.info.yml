@@ -1,0 +1,38 @@
+name: Aten Standard
+type: profile
+description: 'Install with commonly used features pre-configured by the Aten Team.'
+version: VERSION
+core: 8.x
+install:
+  - node
+  - block
+  - breakpoint
+  - ckeditor
+  - config
+  - contextual
+  - menu_link_content
+  - datetime
+  - block_content
+  - quickedit
+  - editor
+  - help
+  - image
+  - inline_form_errors
+  - menu_ui
+  - media
+  - options
+  - path
+  - page_cache
+  - dynamic_page_cache
+  - big_pipe
+  - taxonomy
+  - toolbar
+  - field_ui
+  - file
+  - rdf
+  - responsive_image
+  - views
+  - views_ui
+themes:
+  - bartik
+  - seven
