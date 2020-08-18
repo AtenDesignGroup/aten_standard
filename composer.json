@@ -1,5 +1,5 @@
 {
-    "name": "aten/aten-standard",
+    "name": "aten/aten_standard",
     "description": "The Aten standard installation profile with modules that are pre-configured.",
     "type": "drupal-profile",
     "license": "GPL-2.0-or-later",
