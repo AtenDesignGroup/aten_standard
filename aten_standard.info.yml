@@ -5,6 +5,7 @@ version: VERSION
 core: 8.x
 core_version_requirement: ^8 || ^9
 install:
+  # Drupal core
   - node
   - block
   - breakpoint
@@ -34,6 +35,21 @@ install:
   - responsive_image
   - views
   - views_ui
+  # Drupal custom
+  - token
+  - metatag
+  - redirect
+  - pathauto
+  - google_tag
+  - paragraphs
+  - field_group
+  - module_filter
+  - admin_toolbar
+  - structure_sync
+  - multiple_selects
+  - editor_advanced_link
+  - views_block_filter_block
+  - adminimal_admin_toolbar
 themes:
   - bartik
   - seven
