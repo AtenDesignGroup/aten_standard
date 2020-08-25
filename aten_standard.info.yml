@@ -22,6 +22,7 @@ install:
   - inline_form_errors
   - menu_ui
   - media
+  - media_library
   - options
   - path
   - page_cache
@@ -45,6 +46,7 @@ install:
   - field_group
   - module_filter
   - admin_toolbar
+  - admin_toolbar_tools
   - structure_sync
   - multiple_selects
   - editor_advanced_link
