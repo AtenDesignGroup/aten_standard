@@ -9,5 +9,11 @@
             "email": "travis@aten.io"
         }
     ],
+    "authors": [
+        {
+            "name": "Alan Sherry",
+            "email": "alan@atendesigngroup.com"
+        }
+    ],
     "require": {}
 }
