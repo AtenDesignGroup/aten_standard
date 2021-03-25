@@ -19,4 +19,22 @@ function aten_standard_install() {
   $user = User::load(1);
   $user->roles[] = 'administrator';
   $user->save();
+
+  // Install the default modules. Default modules are installed here, rather
+  // than as a dependency in the `.info.yml` file, so they can be disabled later
+  // if the project requires. The Composer dependency is managed in the
+  // `aten/drupal-recommended-project` for the same reason.
+  \Drupal::service('module_installer')->install([
+    'admin_toolbar',
+    'field_group',
+    'gin',
+    'gin_toolbar',
+    'google_tag',
+    'metatag',
+    'metatag_open_graph',
+    'metatag_twitter_cards',
+    'multiple_selects',
+    'pathauto',
+    'redirect',
+  ]);
 }
