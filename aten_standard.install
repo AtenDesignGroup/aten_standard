@@ -26,6 +26,7 @@ function aten_standard_install() {
   // `aten/drupal-recommended-project` for the same reason.
   \Drupal::service('module_installer')->install([
     'admin_toolbar',
+    'ckeditor_a11ychecker',
     'field_group',
     'gin',
     'gin_toolbar',
