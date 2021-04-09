@@ -28,7 +28,6 @@ function aten_standard_install() {
     'admin_toolbar',
     'ckeditor_a11ychecker',
     'field_group',
-    'gin',
     'gin_toolbar',
     'google_tag',
     'metatag',
@@ -38,4 +37,8 @@ function aten_standard_install() {
     'pathauto',
     'redirect',
   ]);
+
+  // Install the Gin admin theme.
+  // @todo: set config that will make it the admin theme by default.
+  \Drupal::service('theme_installer')->install(['gin']);
 }
