@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @file
  * Install, update and uninstall functions for the standard installation profile.
@@ -14,10 +16,10 @@ use Drupal\user\Entity\User;
  *
  * @see system_install()
  */
-function aten_standard_install() {
+function aten_standard_install(): void {
   // Assign user 1 the "administrator" role.
   $user = User::load(1);
-  $user->roles[] = 'administrator';
+  $user->addRole('administrator');
   $user->save();
 
   // Install the default modules. Default modules are installed here, rather
