@@ -2,20 +2,19 @@ name: Aten Standard
 type: profile
 description: 'Install with commonly used features pre-configured by the Aten Team.'
 version: VERSION
-core: 8.x
-core_version_requirement: ^8 || ^9 || ^10
+core_version_requirement: ^10
 install:
   # Drupal core
+  - sdc
   - node
   - block
   - breakpoint
-  - ckeditor
+  - ckeditor5
   - config
   - contextual
   - menu_link_content
   - datetime
   - block_content
-  - quickedit
   - editor
   - help
   - image
@@ -28,14 +27,14 @@ install:
   - page_cache
   - dynamic_page_cache
   - big_pipe
+  - telephone
   - taxonomy
   - toolbar
   - field_ui
   - file
-  - rdf
   - responsive_image
   - views
   - views_ui
 themes:
-  - bartik
-  - seven
+  - olivero
+  - claro

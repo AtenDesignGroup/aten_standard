@@ -25,20 +25,28 @@ function aten_standard_install() {
   // if the project requires. The Composer dependency is managed in the
   // `aten/drupal-recommended-project` for the same reason.
   \Drupal::service('module_installer')->install([
-    'admin_toolbar',
-    'ckeditor_a11ychecker',
-    'field_group',
-    'gin_toolbar',
-    'google_tag',
     'metatag',
-    'metatag_open_graph',
-    'metatag_twitter_cards',
-    'multiple_selects',
     'pathauto',
     'redirect',
+    'twig_tweak',
+    'google_tag',
+    'field_group',
+    'gin_toolbar',
+    'admin_toolbar',
+    'multiple_selects',
+    'twig_field_value',
+    'admin_toolbar_tools',
+    'metatag_open_graph',
+    'metatag_twitter_cards',
   ]);
+  /** @var \Drupal\Core\Config\ConfigFactory $config_factory */
+  $config_factory = \Drupal::service('config.factory');
+  /** @var \Drupal\Core\Extension\ThemeInstaller $theme_installer */
+  $theme_installer = \Drupal::service('theme_installer');
 
   // Install the Gin admin theme.
-  // @todo: set config that will make it the admin theme by default.
-  \Drupal::service('theme_installer')->install(['gin']);
+  $theme_installer->install(['gin']);
+  $config_factory->getEditable('system.theme')
+    ->set('admin', 'gin')
+    ->save();
 }

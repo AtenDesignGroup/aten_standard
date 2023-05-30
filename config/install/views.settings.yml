@@ -5,11 +5,11 @@ ui:
   show:
     additional_queries: false
     advanced_column: true
-    master_display: true
+    default_display: true
     performance_statistics: false
     preview_information: true
     sql_query:
-      enabled: true
+      enabled: false
       where: above
     display_embed: false
   always_live_preview: true
@@ -44,5 +44,3 @@ field_rewrite_elements:
   ins: INS
   q: Q
   s: S
-_core:
-  default_config_hash: RaRd9EIcwA4u3qCSRLL8EnCicbda1kV__ASmVbyehvQ
