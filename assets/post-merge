@@ -13,22 +13,27 @@
 ###
 
 # Replace [path-to-theme] with the actual path to your theme's directory.
-path_to_theme="[path-to-theme]"
+path_to_theme="web/themes/custom/gutt"
 
 # Change directory to the theme, which is a sibling of the .git directory.
-cd "../../$path_to_theme"
+cd "$path_to_theme"
+
+# Source the nvm initialization script.
+[ -s "$HOME/.nvm/nvm.sh" ] && \. "$HOME/.nvm/nvm.sh"
 
 # Switch to the desired Node.js version.
 nvm use
 
-# Install dependencies.
-npm install
+# Install if the node_modules directory does not exist.
+if [ ! -d "node_modules" ]; then
+  npm install
+fi
 
 # Replace [build-command] with the theme's build command.
-build_command="[build-command]"
+build_command="npm run build"
 
 # Run the build script.
-npm run $build_command
+$build_command
 
 echo "Build completed after pulling changes."
 
