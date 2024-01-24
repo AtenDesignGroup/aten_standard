@@ -1,0 +1,65 @@
+#!/bin/bash
+
+### Beginning of section 1 ###
+#
+# Comment out this section if you do not want to build the theme after pulling
+# code.
+#
+# This section builds the theme after pulling code.
+# Replace two variable values in this script before using it:
+# 1. [path-to-theme] with the actual path to your theme's directory, relative
+#    to the project root.
+# 2. [build-command] with the theme's build command.
+###
+
+# Replace [path-to-theme] with the actual path to your theme's directory.
+path_to_theme="[path-to-theme]"
+
+# Change directory to the theme, which is a sibling of the .git directory.
+cd "../../$path_to_theme"
+
+# Switch to the desired Node.js version.
+nvm use
+
+# Install dependencies.
+npm install
+
+# Replace [build-command] with the theme's build command.
+build_command="[build-command]"
+
+# Run the build script.
+npm run $build_command
+
+echo "Build completed after pulling changes."
+
+# Change back to the project root.
+cd -
+### End of section 1. ###
+
+
+### Beginning of section 2 ###
+#
+# Automatically updates 'master' branch with the latest changes from 'main'
+# when a pull or merge affects the 'main' branch. Useful for projects that
+# deploy from the 'master' branch, such as
+#
+# To use this functionality, uncomment the following section.
+###
+
+# # Get the name of the branch affected by the merge.
+# affected_branch=$(git symbolic-ref --short HEAD)
+
+# # Check if the commit was made to the 'main' branch.
+# if [ "$affected_branch" = "main" ]; then
+#     # Check if 'master' branch exists
+#     if ! git show-ref --verify --quiet "refs/heads/master"; then
+#         # The 'master' branch does not exist, so create it.
+#         git checkout -b master
+#     else
+#         # The 'master' branch exists, switch to it.
+#         git checkout master
+#     fi
+#     git merge main
+#     git checkout main
+# fi
+### End of section 2 ###
