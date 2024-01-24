@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Automatically updates 'master' branch with the latest changes from 'main'.
+
+# Get the name of the currently checked-out branch.
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+# Check if the commit was made to the 'main' branch.
+if [ "$current_branch" = "main" ]; then
+    # Check if 'master' branch exists
+    if ! git show-ref --verify --quiet "refs/heads/master"; then
+        # 'master' branch does not exist, so create it
+        git checkout -b master
+    else
+        # 'master' branch exists, switch to it
+        git checkout master
+    fi
+    git merge main
+    git checkout main
+fi
