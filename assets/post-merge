@@ -13,7 +13,8 @@
 ###
 
 # Replace [path-to-theme] with the actual path to your theme's directory.
-path_to_theme="web/themes/custom/gutt"
+# Example: path_to_theme="web/themes/custom/tacos"
+path_to_theme="[path-to-theme]"
 
 # Change directory to the theme, which is a sibling of the .git directory.
 cd "$path_to_theme"
@@ -30,7 +31,8 @@ if [ ! -d "node_modules" ]; then
 fi
 
 # Replace [build-command] with the theme's build command.
-build_command="npm run build"
+# Example: build_command="npm run build"
+build_command="[build-command]"
 
 # Run the build script.
 $build_command
