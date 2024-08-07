@@ -5,7 +5,7 @@ version: VERSION
 core: 8.x
 core_version_requirement: ^8 || ^9 || ^10
 install:
-    # Drupal core
+  # Drupal core
   - big_pipe
   - block
   - block_content
@@ -34,4 +34,5 @@ install:
   - toolbar
   - views
   - views_ui
-themes: {  }
+themes:
+  - claro
