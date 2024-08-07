@@ -5,35 +5,33 @@ version: VERSION
 core: 8.x
 core_version_requirement: ^8 || ^9 || ^10
 install:
-  # Drupal core
-- big_pipe
-- block
-- block_content
-- breakpoint
-- ckeditor5
-- config
-- contextual
-- datetime
-- dynamic_page_cache
-- editor
-- field_ui
-- file
-- help
-- image
-- inline_form_errors
-- media
-- media_library
-- menu_link_content
-- menu_ui
-- node
-- options
-- page_cache
-- path
-- responsive_image
-- taxonomy
-- toolbar
-- views
-- views_ui
-themes:
-  - bartik
-  - seven
+    # Drupal core
+  - big_pipe
+  - block
+  - block_content
+  - breakpoint
+  - ckeditor5
+  - config
+  - contextual
+  - datetime
+  - dynamic_page_cache
+  - editor
+  - field_ui
+  - file
+  - help
+  - image
+  - inline_form_errors
+  - media
+  - media_library
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - page_cache
+  - path
+  - responsive_image
+  - taxonomy
+  - toolbar
+  - views
+  - views_ui
+themes: {  }
